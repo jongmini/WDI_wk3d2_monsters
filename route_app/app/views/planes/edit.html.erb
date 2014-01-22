@@ -1,0 +1,16 @@
+
+<form action="/planes/<%= @plane.id %>" method="post">
+	<!-- action="/planes/<%#= @plane.id %>"  so that it overides the curernt @plane  -->
+	<input type="hidden" name="_method" value="put">
+	<!-- the above line tells the server that we are actually doing a put method -->
+	<!-- the underscore on name="_method" is the convention -->
+	<label> Name: </label> <input type="text" name="plane[name]" value="<%= @plane.name %>" > <br>
+	<label> Engine Type: </label> <input type="text" name="plane[engine_type]" value="<%= @plane.engine_type %>"><br>
+    <label> Description: </label><br> 
+	    <textarea name="plane[description]"><%= @plane.description %></textarea><br>
+
+	<!-- authenticty tag -->
+	<%= token_tag form_authenticity_token %>
+
+	<button> REMODEL </button>
+ </form>

@@ -1,0 +1,10 @@
+
+
+	<form action="/planes" method="post">
+        <input type="text" name="plane[name]"><br>
+        <input type="text" name="plane[engine_type]"><br>
+        <textarea name="plane[description]"></textarea><br>
+        <%= token_tag form_authenticity_token %>
+        <!-- authenticity token is required -->
+        <button> Lift offffffff!</button><br>
+    </form>

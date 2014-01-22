@@ -1,0 +1,12 @@
+ 
+ <h1>Hello pilots!</h1>
+
+  <% @planes.each do |plane| %>
+        <div>
+        	<ul>
+            <li>Name:  <%= plane[:name] %> </li>
+            <li>Engine Type: <%= plane[:engine_type] %> </li>
+            <li>Description: <%= plane[:description] %> </li>
+        	</ul>
+        </div>
+    <% end %>

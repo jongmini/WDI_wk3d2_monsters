@@ -1,0 +1,10 @@
+
+<h1> Enter the monster! </h1>
+<form action="/monsters" method="post">
+    <p> Name: <br><input type="text" name="monster[name]"></p>
+    <p> Type: <br><input type="text" name="monster[monster_type]"></p>
+    <p> Description: <br><textarea name="monster[description]"></textarea></p>
+    <%= token_tag form_authenticity_token %>
+    <!-- authenticity token is required -->
+    <button> BOO! </button><br>
+</form>
