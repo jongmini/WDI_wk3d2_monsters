@@ -1,14 +1,19 @@
+
 <div class="container result">
+	<div class="left">
+		<h1> Edit your monster! </h1>
+		<form action="/monsters/<%=@monster.id%>" method="post">
+			<input type="hidden" name="_method" value="put">
+		    <label> Name: </label> <input type="text" name="monster[name]" value="<%= @monster.name %>"></p>
+		    <label> Type: </label> <input type="text" name="monster[monster_type]" value="<%= @monster.monster_type %>"></p>
+		    <label> Description: </label><textarea name="monster[description]"><%= @monster.description %></textarea></p>
+		    <%= token_tag form_authenticity_token %>
+		    <!-- authenticity token is required -->
+		    <button> BOO! </button><br>
+		</form>
+	</div>
 
-<h1> Edit your monster! </h1>
-<form action="/monsters/<%=@monster.id%>" method="post">
-	<input type="hidden" name="_method" value="put">
-    <label> Name: </label> <input type="text" name="monster[name]" value="<%= @monster.name %>"></p>
-    <label> Type: </label> <input type="text" name="monster[monster_type]" value="<%= @monster.monster_type %>"></p>
-    <label> Description: </label><textarea name="monster[description]"><%= @monster.description %></textarea></p>
-    <%= token_tag form_authenticity_token %>
-    <!-- authenticity token is required -->
-    <button> BOO! </button><br>
-</form>
-
+	<div class="right">
+		<img class="img-rounded" src="http://25.media.tumblr.com/tumblr_lp9o6cgW7W1qm6oc3o1_500.gif" height="200px">
+	</div>
 </div>

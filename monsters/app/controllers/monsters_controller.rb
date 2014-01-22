@@ -44,15 +44,6 @@ class MonstersController < ApplicationController
 		render :delete
 	end
 
-	# def delete
-	# 	bog_id = params[:id]
-	# 	bog = Bog.find(bog_id)
-
-	# 	bog.destroy
-
-	# 	redirect_to "/bogs"
-	# end
-
 	def remove
 		@id = params[:id]
 		# Monster.delete(Monster.find(10))
