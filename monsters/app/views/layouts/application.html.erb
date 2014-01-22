@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html>
+
+	<link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+		<link href="http://icons.iconarchive.com/icons/iconshock/monsters-inc/256/Monster-inc-icon.png" rel="shortcut icon">
+
 <head>
+	<link href='http://fonts.googleapis.com/css?family=Sigmar+One' rel='stylesheet' type='text/css'>
   <title>Monsters</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  
 </head>
 <body>
+	<div class="navbar navbar-inverse navbar-fixed-top row">
+			<div class="col-xs-6 col-sm-6 col-md-9 col-lg-9">
+				<ul class="nav navbar-nav">
+					<li><a href="/">home</a></li>
+					<li><a href="/monsters/new">add monsters</a></li>
+				</ul>
+			</div>
+
+        </div>
 
 <%= yield %>
 

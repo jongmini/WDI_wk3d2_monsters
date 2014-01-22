@@ -1,7 +1,11 @@
-Hello Monsters!
+<div class="container result">
+
+<h1>Hello Monsters!</h1>
 
 <% @monsters.each do |monster| %>
-	<p>Name: <%= monster[:name] %></p>
-	<p>Type: <%= monster[:monster_type] %></p>
-	<p>Description: <%= monster[:description] %></p><br>
+	<p class="lead">Name: <a href="/monsters/<%= monster[:id]%>"><%= monster[:name] %></a></p>
+	<p class="lead">Type: <%= monster[:monster_type] %></p>
+	<p class="lead">Description: <%= monster[:description] %></p><br>
 <% end %>
+
+</div>

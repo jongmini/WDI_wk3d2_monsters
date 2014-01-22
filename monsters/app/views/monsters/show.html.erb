@@ -1,9 +1,18 @@
 <!-- /monsters/app/views/monsters/show.html.erb -->
 
-
+<div class="container result">
 
 <div>
-    Name: <%= @monster.name %> <br>
-    Type: <%= @monster.monster_type %> <br>
-    Description: <%= @monster.description %> 
+	<h1> Monster Information </h1>
+    <p class="lead">Name: <%= @monster.name %> <p>
+    <p class="lead">Type: <%= @monster.monster_type %></p> 
+    <p class="lead">Description: <%= @monster.description %> </p>
+
+    <a class="lead" href="/monsters/<%= @monster.id %>/edit">EDIT THIS MONSTER</a><br>
+    <a class="lead" href="/monsters/<%= @monster.id %>/delete">DELETE THIS MONSTER</a>
+
+</div>
+
+
+
 </div>

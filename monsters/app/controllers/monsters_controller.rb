@@ -1,4 +1,4 @@
-#/monsters/app/controllers/monsters_controller.rb
+#/monsters/app/controllers/monsters_controller.rb 
 
 class MonstersController < ApplicationController
 
@@ -37,5 +37,32 @@ class MonstersController < ApplicationController
 		monster.update_attributes(updated_monster)
 		redirect_to "/monsters/#{monster.id}"
 	end
+
+	def delete
+		@id = params[:id]
+
+		render :delete
+	end
+
+	# def delete
+	# 	bog_id = params[:id]
+	# 	bog = Bog.find(bog_id)
+
+	# 	bog.destroy
+
+	# 	redirect_to "/bogs"
+	# end
+
+	def remove
+		@id = params[:id]
+		# Monster.delete(Monster.find(10))
+		# monster = params.require(:monster).permit(:name)
+		monster = Monster.find(@id)
+
+		monster.destroy
+
+		render :gone
+	end
+
 
 end

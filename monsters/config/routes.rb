@@ -11,9 +11,14 @@ Monsters::Application.routes.draw do
 
   get "/monsters/:id/edit", to: "monsters#edit"
 
+  get "/monsters/:id/delete", to: "monsters#delete"
+
   post "/monsters", to: "monsters#create"
  
   put "/monsters/:id", to: "monsters#update"
+
+  post "/monsters/:id/remove", to: "monsters#remove"
+
 
 
 end
